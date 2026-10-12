@@ -1,9 +1,11 @@
 <Solution>
+  <Folder Name="/benchmarks/">
+    <Project Path="benchmarks/VulnerableBankApi/VulnerableBankApi.csproj" />
+  </Folder>
   <Folder Name="/src/">
     <Project Path="src/RoslynSecurityAnalyzer/RoslynSecurityAnalyzer.csproj" />
   </Folder>
   <Folder Name="/tests/">
     <Project Path="tests/RoslynSecurityAnalyzer.Tests/RoslynSecurityAnalyzer.Tests.csproj" />
   </Folder>
-  <Project Path="benchmarks/VulnerableBankApi/VulnerableBankApi.csproj" />
 </Solution>
