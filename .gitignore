@@ -1,6 +1,16 @@
-/.vs
-/benchmarks/VulnerableBankApi/bin
-/benchmarks/VulnerableBankApi/obj
+# Build output (every project)
+[Bb]in/
+[Oo]bj/
+
+# Visual Studio / Rider / VS Code
+.vs/
+.idea/
+*.user
+*.suo
+
+# Test results
+TestResults/
+*.trx
 
 # Local SQLite database (recreated on startup)
 *.db
