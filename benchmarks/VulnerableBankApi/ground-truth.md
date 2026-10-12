@@ -44,21 +44,23 @@ The analyzer should **not** flag these.
 | V7 | As alice: `GET /api/transactions?accountId=1&q=' OR 1=1 --` (URL-encoded) | Returns Bob's transaction (Mobile recharge) |
 | V8 | With no token: `POST /api/admin/accounts/1/adjust-balance` with `{ "amount": 1000000, "reason": "x" }` | 204 No Content; alice's balance goes up by 1,000,000 |
 
-## Scoring (fill in after running the analyzer)
+## Scoring
+
+**Run 1, 2026-10-12: RSA001 only.** SQL injection (CWE-89): recall 2/2, precision 2/2. Whole benchmark: 2 of 8 vulnerabilities detected, 0 false positives.
 
 | ID | Expected | Analyzer flagged? | Outcome |
 |---|---|---|---|
-| V1 | flag | | |
-| V2 | flag | | |
-| V3 | flag | | |
-| V4 | flag | | |
-| V5 | flag | | |
-| V6 | flag | | |
-| V7 | flag | | |
-| V8 | flag | | |
-| S1 | no flag | | |
-| S2 | no flag | | |
-| S3 | no flag | | |
-| S4 | no flag | | |
+| V1 | flag | No (no rule yet) | FN |
+| V2 | flag | No (no rule yet) | FN |
+| V3 | flag | No (no rule yet) | FN |
+| V4 | flag | No (no rule yet) | FN |
+| V5 | flag | No (no rule yet) | FN |
+| V6 | flag | RSA001 at AccountsController.cs(42,43) | TP |
+| V7 | flag | RSA001 at TransactionsController.cs(19,27) | TP |
+| V8 | flag | No (no rule yet) | FN |
+| S1 | no flag | No | TN |
+| S2 | no flag | No | TN |
+| S3 | no flag | No | TN |
+| S4 | no flag | No | TN |
 
 Outcome is one of: **TP** (true positive: real bug flagged), **FN** (false negative: real bug missed), **FP** (false positive: safe code flagged), **TN** (true negative: safe code left alone).
