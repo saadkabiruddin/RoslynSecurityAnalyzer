@@ -1,3 +1,6 @@
 /.vs
 /benchmarks/VulnerableBankApi/bin
 /benchmarks/VulnerableBankApi/obj
+
+# Local SQLite database (recreated on startup)
+*.db

@@ -1,4 +1,4 @@
-@host = http://localhost:5000
+@host = http://localhost:5247
 
 POST {{host}}/api/auth/login
 Content-Type: application/json
